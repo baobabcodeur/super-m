@@ -41,11 +41,11 @@
             @endif
             @endforeach
             @forelse ($categories as $category)
-           
+            @if( $product->category_id != $category->id )
 
 
             <option value="{{ $category->id }}">{{ $category->name }}</option>
-            
+            @endif
             @empty
             <option value="">Pas de catégorie !</option>
 
